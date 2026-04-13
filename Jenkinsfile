@@ -39,6 +39,7 @@ pipeline {
         stage('Build Image'){
             steps {
                 script {
+                    def version = appVersion?.trim() ? appVersion : "latest"
                     sh """
                        docker build -t catalogue:${appVersion} .
                        docker images
