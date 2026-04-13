@@ -7,7 +7,7 @@ pipeline {
     }
     environment {
         COURSE = "Jenkins"
-        appVersion = ""
+        appVersion = "latest"
         ACC_ID = "678511327499"
         PROJECT = "roboshop"
         COMPONENT = "catalogue"
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                       docker build -t catalogue : ${appVersion} .
+                       docker build -t catalogue:${appVersion} .
                        docker images
                     """
                 }
