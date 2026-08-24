@@ -59,8 +59,8 @@ pipeline {
                     }
                 }
             }
-   
         }
+    }    
     // these are post-build section
     post{
         always {
