@@ -41,7 +41,6 @@ pipeline {
                 script{
                     sh """
                         npm test
-
                     """
                 }
             }
